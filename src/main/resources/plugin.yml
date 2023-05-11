@@ -1,0 +1,20 @@
+name: IpApi
+version: '${version}'
+main: com.edgeburnmedia.ipapi.ipapi.IpApi
+api-version: 1.19
+commands:
+  geolocate:
+    aliases:
+      - geo
+      - geoip
+    description: Geolocate a player
+    usage: /<command> player
+    permission: ipapi.geolocate
+  locateip:
+    description: Geolocate an IP address
+    usage: /<command> ip_address
+    permission: ipapi.geolocate
+permissions:
+    ipapi.geolocate:
+        description: Allows the user to geolocate an IP address
+        default: op
